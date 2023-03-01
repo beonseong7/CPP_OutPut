@@ -128,7 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="basic_op.cpp" />
-    <ClCompile Include="operator3.cpp" />
+    <ClCompile Include="operator4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="basic_op.h" />

@@ -18,7 +18,7 @@
     <ClCompile Include="basic_op.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="operator3.cpp">
+    <ClCompile Include="operator4.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
