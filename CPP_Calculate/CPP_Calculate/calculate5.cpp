@@ -1,39 +1,64 @@
 #include<iostream>
 #include<stack>
 #include<string>
+#include<queue>
 #include"basic_op.h"
 using namespace std;
 int calculating(string postfix);
-string to_postfix(string input);
+queue<string> to_postfix(queue<string> postfix);
+queue<string>parsing(queue<string> postfix,string input);
 int main()
 {
+	queue<string> postfix;
 	string input;
-	string postfix = "";
 	cout << "input formula" << endl;
 	cin >> input;
-	postfix = to_postfix(input);
-	cout << postfix << endl;
-	cout << "answer is" << calculating(postfix) << endl;
+	postfix = parsing(postfix,input);
+	//cout << postfix << endl;
+	//cout << "answer is" << calculating(postfix) << endl;
 }
-string to_postfix(string input)
+queue<string>parsing(queue<string> postfix, string input)
 {
-	stack<char>op;
-	string postfix = "";
-	for (int i = 0; i < input.size(); i++) {
-		switch (input[i])
-		{
-		case '+':
-			for (int j = op.size(); j > 0 && op.top() != '('; j--)
+	string tmp="";
+	for (int i = 0; i < input.size();)
+	{
+		tmp = "";
+		if (input[i] >= '0' && input[i] <= '9') {
+			while (input[i] >= '0' && input[i] <= '9')
 			{
-				postfix += op.top();
+				tmp += input[i];
+				i++;
+			}
+			postfix.push(tmp);
+		}
+		else
+		{
+			tmp += input[i];
+			postfix.push(tmp);
+			i++;
+		}
+	}
+	return postfix;
+}
+queue<string> to_postfix(queue<string> postfix)
+{
+	stack<string>op;
+	queue<string> tmp_postfix;
+	for (int i = 0; i < postfix.size(); i++) {
+		switch (tmp_postfix.front())
+		{
+		case "+":
+			for (int j = op.size(); j > 0 && op.top() != "("; j--)
+			{
+				tmp_postfix.push(op.top());
 				op.pop();
 			}
 			op.push(input[i]);
 			break;
 		case '-':
-			for (int j = op.size(); j > 0 && op.top() != '('; j--)
+			for (int j = op.size(); j > 0 && op.top() != "("; j--)
 			{
-				postfix += op.top();
+				tmp_postfix.push(op.top());
 				op.pop();
 			}
 			op.push(input[i]);
@@ -48,9 +73,9 @@ string to_postfix(string input)
 			op.push(input[i]);
 			break;
 		case')':
-			for (int j = op.size(); op.top() != '('; j--)
+			for (int j = op.size(); op.top() != "("; j--)
 			{
-				postfix += op.top();
+				tmp_postfix.push(op.top());
 				op.pop();
 			}
 			op.pop();
