@@ -4,18 +4,20 @@
 #include<queue>
 #include"basic_op.h"
 using namespace std;
-int calculating(string postfix);
+int calculating(queue<string>postfix);
 queue<string> to_postfix(queue<string> postfix);
 queue<string>parsing(queue<string> postfix,string input);
 int main()
 {
 	queue<string> postfix;
 	string input;
+	int result;
 	cout << "input formula" << endl;
 	cin >> input;
 	postfix = parsing(postfix,input);
-	//cout << postfix << endl;
-	//cout << "answer is" << calculating(postfix) << endl;
+	postfix = to_postfix(postfix);
+	result = calculating(postfix);
+	cout <<"answer is " << result << endl;
 }
 queue<string>parsing(queue<string> postfix, string input)
 {
@@ -43,94 +45,111 @@ queue<string>parsing(queue<string> postfix, string input)
 queue<string> to_postfix(queue<string> postfix)
 {
 	stack<string>op;
+	string tmp = "";
 	queue<string> tmp_postfix;
-	for (int i = 0; i < postfix.size(); i++) {
-		switch (tmp_postfix.front())
+
+	while (!postfix.empty()) {
+		tmp = postfix.front();
+		if (tmp[0] >= '0' && tmp[0] <= '9')
 		{
-		case "+":
-			for (int j = op.size(); j > 0 && op.top() != "("; j--)
-			{
-				tmp_postfix.push(op.top());
-				op.pop();
-			}
-			op.push(input[i]);
-			break;
-		case '-':
-			for (int j = op.size(); j > 0 && op.top() != "("; j--)
-			{
-				tmp_postfix.push(op.top());
-				op.pop();
-			}
-			op.push(input[i]);
-			break;
-		case'*':
-			op.push(input[i]);
-			break;
-		case'/':
-			op.push(input[i]);
-			break;
-		case'(':
-			op.push(input[i]);
-			break;
-		case')':
-			for (int j = op.size(); op.top() != "("; j--)
-			{
-				tmp_postfix.push(op.top());
-				op.pop();
-			}
-			op.pop();
-			break;
-		default:
-			postfix += input[i];
-			break;
+			tmp_postfix.push(postfix.front());
 		}
+		else
+		{
+			switch (tmp[0])
+			{
+			case '+':
+				for (int j = op.size(); j > 0 && op.top() != "("; j--)
+				{
+					tmp_postfix.push(op.top());
+					op.pop();
+				}
+				op.push(tmp);
+				break;
+			case '-':
+				for (int j = op.size(); j > 0 && op.top() != "("; j--)
+				{
+					tmp_postfix.push(op.top());
+					op.pop();
+				}
+				op.push(tmp);
+				break;
+			case'*':
+				op.push(tmp);
+				break;
+			case'/':
+				op.push(tmp);
+				break;
+			case'(':
+				op.push(tmp);
+				break;
+			case')':
+				for (int j = op.size(); op.top() != "("; j--)
+				{
+					tmp_postfix.push(op.top());
+					op.pop();
+				}
+				op.pop();
+				break;
+			default:
+				cout << "error code(0001):정의되지않은 데이터입니다." << endl;
+				break;
+			}
+		}
+		postfix.pop();
 	}
 	while (op.size() > 0) {
-		postfix += op.top();
+		tmp_postfix.push(op.top());
 		op.pop();
 	}
-	return postfix;
+	return tmp_postfix;
 }
-int calculating(string postfix)
+int calculating(queue<string> postfix)
 {
 	stack<int> pf_op;
 	int tmp1, tmp2;
-	for (int i = 0; i < postfix.size(); i++)
+	while (!postfix.empty())
 	{
-		switch (postfix[i]) {
-		case'+':
-			tmp1 = pf_op.top();
-			pf_op.pop();
-			tmp2 = pf_op.top();
-			pf_op.pop();
-			pf_op.push(plus_(tmp1, tmp2));
-			break;
-		case'-':
-			tmp1 = pf_op.top();
-			pf_op.pop();
-			tmp2 = pf_op.top();
-			pf_op.pop();
-			pf_op.push(minus_(tmp1, tmp2));
-			break;
-		case'/':
-			tmp2 = pf_op.top();
-			pf_op.pop();
-			tmp1 = pf_op.top();
-			pf_op.pop();
-			pf_op.push(divide_(tmp1, tmp2));
-			break;
-		case'*':
-			tmp1 = pf_op.top();
-			pf_op.pop();
-			tmp2 = pf_op.top();
-			pf_op.pop();
-			pf_op.push(multiple_(tmp1, tmp2));
-			break;
-		default:
-			pf_op.push(postfix[i] - '0');
-			break;
+		if (postfix.front()[0] >= '0' && postfix.front()[0] <= '9') {
+			pf_op.push(stoi(postfix.front()));
 		}
-		cout << "done" << endl;
+		else
+		{
+			switch (postfix.front()[0]) {
+			case'+':
+				tmp1 = pf_op.top();
+				pf_op.pop();
+				tmp2 = pf_op.top();
+				pf_op.pop();
+				pf_op.push(plus_(tmp1, tmp2));
+				break;
+			case'-':
+				tmp1 = pf_op.top();
+				pf_op.pop();
+				tmp2 = pf_op.top();
+				pf_op.pop();
+				pf_op.push(minus_(tmp2, tmp1));
+				break;
+			case'/':
+				tmp2 = pf_op.top();
+				pf_op.pop();
+				tmp1 = pf_op.top();
+				pf_op.pop();
+				pf_op.push(divide_(tmp1, tmp2));
+				break;
+			case'*':
+				tmp1 = pf_op.top();
+				pf_op.pop();
+				tmp2 = pf_op.top();
+				pf_op.pop();
+				pf_op.push(multiple_(tmp1, tmp2));
+				break;
+			default:
+				break;
+			}
+			cout << "done" << endl;
+		}
+		postfix.pop();
 	}
 	return pf_op.top();
 }
