@@ -1,5 +1,2 @@
-﻿  calculate5.cpp
-C:\Users\user\Documents\workspace\CPP_basic\CPP_Outputs\CPP_Calculate\CPP_Calculate\calculate5.cpp(68,5): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\user\Documents\workspace\CPP_basic\CPP_Outputs\CPP_Calculate\CPP_Calculate\calculate5.cpp(76,5): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\user\Documents\workspace\CPP_basic\CPP_Outputs\CPP_Calculate\CPP_Calculate\calculate5.cpp(93,5): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  calculate_ui.cpp
   CPP_Calculate.vcxproj -> C:\Users\user\Documents\workspace\CPP_basic\CPP_Outputs\CPP_Calculate\x64\Debug\CPP_Calculate.exe
