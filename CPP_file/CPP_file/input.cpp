@@ -9,12 +9,34 @@ int main()
 	using namespace std;
 	string data;
 	student students[10];
-	for (int i = 0; i < input; i++) {
-		students[i] = init_student();
-	}
+	student search;
 	for (int i = 0; i < input; i++) {
 		cout << students[i].id << endl;
 		cout << students[i].name << endl;
+	}
+	while (true)
+	{
+		cout << "choose activity" << endl;
+		int answer;
+		cin >> answer;
+		switch (answer)
+		{
+		case 1:
+			for (int i = 0; i < input; i++) {
+				students[i] = init_student();
+			}
+		case 2:
+			int tmp=0;
+			cout << "input search data" << endl;
+			cin >> search.id >> search.name;
+			while (!search_student(students[tmp],search)) {
+				tmp++;
+			}
+			cout << students[tmp].id << endl;
+			cout << students[tmp].name << endl;
+		default:
+			break;
+		}
 	}
 	return 0;
 }
