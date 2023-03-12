@@ -16,24 +16,31 @@ int main()
 	}
 	while (true)
 	{
+		int tmp = 0;
 		cout << "choose activity" << endl;
 		int answer;
 		cin >> answer;
 		switch (answer)
 		{
+
 		case 1:
 			for (int i = 0; i < input; i++) {
 				students[i] = init_student();
 			}
+			break;
 		case 2:
-			int tmp=0;
 			cout << "input search data" << endl;
 			cin >> search.id >> search.name;
 			while (!search_student(students[tmp],search)) {
 				tmp++;
 			}
-			cout << students[tmp].id << endl;
-			cout << students[tmp].name << endl;
+			break;
+		case 3:
+			while (!students[tmp].id.empty())
+			{
+				debug_student(students[tmp]);
+				tmp++;
+			}
 		default:
 			break;
 		}
@@ -56,4 +63,9 @@ bool search_student(student tmp1,student tmp2)
 	{
 		return false;
 	}
+}
+void debug_student(student tmp)
+{
+	cout << tmp.id << endl;
+	cout << tmp.name << endl;
 }
