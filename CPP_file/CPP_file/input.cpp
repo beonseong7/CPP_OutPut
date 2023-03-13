@@ -1,15 +1,30 @@
 #include<iostream>
 #include<string>
+#include<fstream>
 #include "student.h"
 #define  input 3
 student init_student();
 bool search_student(student tmp1,student tmp2);
+void debug_student(student tmp);
 int main()
 {
+	ifstream ifs;
+	ifs.open("student_dt.txt");
 	using namespace std;
 	string data;
 	student students[10];
 	student search;
+	if (ifs.is_open())
+	{
+		int tmp = 0;
+		while (!ifs.eof())
+		{
+			getline(ifs, students[tmp].name);
+			getline(ifs, students[tmp].id);
+			tmp++;
+		}
+	}
+	ifs.close();
 	for (int i = 0; i < input; i++) {
 		cout << students[i].id << endl;
 		cout << students[i].name << endl;
