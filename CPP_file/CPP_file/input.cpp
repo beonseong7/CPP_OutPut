@@ -3,17 +3,22 @@
 #include<fstream>
 #include "student.h"
 #define  input 3
+void debug_dept(dept tmp);
 student init_student();
 bool search_student(student tmp1,student tmp2);
 void debug_student(student tmp);
 int main()
 {
 	ifstream ifs;
+	ifstream ifs_dept;
+	ifs_dept.open("dept_dt.txt");
 	ifs.open("student_dt.txt");
 	using namespace std;
 	string data;
 	student students[10];
+	dept depts[10];
 	student search;
+	int search_num = 0;
 	if (ifs.is_open())
 	{
 		int tmp = 0;
@@ -24,14 +29,29 @@ int main()
 			tmp++;
 		}
 	}
+	if (ifs_dept.is_open())
+	{
+		int tmp = 0;
+		while (!ifs_dept.eof())
+		{
+			getline(ifs_dept, depts[tmp].dept_name);
+			getline(ifs_dept, depts[tmp].dep_id);
+			tmp++;
+		}
+	}
 	ifs.close();
+	ifs_dept.close();
 	for (int i = 0; i < input; i++) {
 		cout << students[i].id << endl;
 		cout << students[i].name << endl;
 	}
+	for (int i = 0; i < input; i++) {
+		cout << depts[i].dep_id << endl;
+		cout << depts[i].dept_name << endl;
+	}
 	while (true)
 	{
-		int tmp = 0;
+		
 		cout << "choose activity" << endl;
 		int answer;
 		cin >> answer;
@@ -44,17 +64,26 @@ int main()
 			}
 			break;
 		case 2:
+			search_num = 0;
 			cout << "input search data" << endl;
-			cin >> search.id >> search.name;
-			while (!search_student(students[tmp],search)) {
-				tmp++;
+			cin >> search.id;
+			while (!search_student(students[search_num],search)) {
+				search_num++;
 			}
+			debug_student(students[search_num]);
 			break;
 		case 3:
-			while (!students[tmp].id.empty())
+			for(int i=0;!students[i].id.empty();i++)
 			{
-				debug_student(students[tmp]);
-				tmp++;
+				debug_student(students[i]);
+				i++;
+			}
+		case 4:
+			cout << "choose dept data" << endl;
+			for (int i = 0; !depts[i].dep_id.empty(); i++)
+			{
+				debug_dept(depts[i]);
+				i++;
 			}
 		default:
 			break;
@@ -71,13 +100,18 @@ student init_student()
 }
 bool search_student(student tmp1,student tmp2)
 {
-	if (tmp1.id == tmp2.id && tmp2.id == tmp2.name) {
+	if (tmp1.id == tmp2.id) {
 		return true;
 	}
 	else
 	{
 		return false;
 	}
+}
+void debug_dept(dept tmp)
+{
+	cout << tmp.dept_name << endl;
+	cout << tmp.dep_id << endl;
 }
 void debug_student(student tmp)
 {

@@ -1,6 +1,6 @@
 compscience
 2000200
-compscience
-2000200
-compscience
-2000200
+socialscience
+2000100
+math
+2000000
