@@ -7,6 +7,7 @@ void debug_dept(dept tmp);
 student init_student();
 bool search_student(student tmp1,student tmp2);
 void debug_student(student tmp);
+bool search_dept(dept tmp1, dept tmp2);
 int main()
 {
 	ifstream ifs;
@@ -18,7 +19,9 @@ int main()
 	student students[10];
 	dept depts[10];
 	student search;
+	dept dept_search;
 	int search_num = 0;
+	int dept_search_num = 0;
 	if (ifs.is_open())
 	{
 		int tmp = 0;
@@ -76,15 +79,28 @@ int main()
 			for(int i=0;!students[i].id.empty();i++)
 			{
 				debug_student(students[i]);
-				i++;
 			}
 		case 4:
 			cout << "choose dept data" << endl;
 			for (int i = 0; !depts[i].dep_id.empty(); i++)
 			{
 				debug_dept(depts[i]);
-				i++;
 			}
+			dept_search_num = 0;
+			cin >> dept_search.dep_id;
+			while (!search_dept(depts[dept_search_num],dept_search)) {
+				dept_search_num++;
+			}
+			break;
+		case 5:
+			char tmp;
+			cout << "input this data to founded student?(y,n)" << endl;
+			cin >> tmp;
+			if (tmp == 'y' || tmp == 'Y')
+			{
+				students[search_num].depts[0] = depts[dept_search_num]; // ¼öÁ¤
+			}
+			break;
 		default:
 			break;
 		}
@@ -101,6 +117,16 @@ student init_student()
 bool search_student(student tmp1,student tmp2)
 {
 	if (tmp1.id == tmp2.id) {
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+bool search_dept(dept tmp1, dept tmp2)
+{
+	if (tmp1.dep_id == tmp2.dep_id) {
 		return true;
 	}
 	else

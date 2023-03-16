@@ -1,6 +1,6 @@
 compscience
 2000200
-socialscience
+social
 2000100
 math
 2000000
