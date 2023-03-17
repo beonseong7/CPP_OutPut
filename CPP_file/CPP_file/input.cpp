@@ -56,6 +56,11 @@ int main()
 	{
 		
 		cout << "choose activity" << endl;
+		cout << "[1:input student dt]" << endl;
+		cout << "[2:search student dt]" << endl;
+		cout << "[3:debug student dt]" << endl;
+		cout << "[4:search dept dt]" << endl;
+		cout << "[5:input dept dt to student dt]" << endl;
 		int answer;
 		cin >> answer;
 		switch (answer)
@@ -79,7 +84,14 @@ int main()
 			for(int i=0;!students[i].id.empty();i++)
 			{
 				debug_student(students[i]);
+				int j = 0;
+				while (!students[i].depts[j].dep_id.empty())
+				{
+					debug_dept(students[i].depts[j]);
+					j++;
+				}
 			}
+			break;
 		case 4:
 			cout << "choose dept data" << endl;
 			for (int i = 0; !depts[i].dep_id.empty(); i++)
@@ -98,7 +110,12 @@ int main()
 			cin >> tmp;
 			if (tmp == 'y' || tmp == 'Y')
 			{
-				students[search_num].depts[0] = depts[dept_search_num]; // 수정
+				int i = 0;
+				while (!students[search_num].depts[i].dep_id.empty())
+				{
+					i++;
+				}
+				students[search_num].depts[i] = depts[dept_search_num]; // 수정
 			}
 			break;
 		default:

@@ -1,2 +1,2 @@
 ﻿  input.cpp
-C:\Users\user\Documents\workspace\CPP_basic\CPP_Outputs\CPP_file\CPP_file\input.cpp(101,32): error C3863: 배열 형식 'dept [10]'은(는) 할당할 수 없습니다.
+  CPP_file.vcxproj -> C:\Users\user\Documents\workspace\CPP_basic\CPP_Outputs\CPP_file\x64\Debug\CPP_file.exe
