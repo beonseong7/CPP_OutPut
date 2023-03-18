@@ -61,15 +61,18 @@ int main()
 		cout << "[3:debug student dt]" << endl;
 		cout << "[4:search dept dt]" << endl;
 		cout << "[5:input dept dt to student dt]" << endl;
+		cout << "[6:save and exit]" << endl;
 		int answer;
 		cin >> answer;
 		switch (answer)
 		{
 
 		case 1:
-			for (int i = 0; i < input; i++) {
-				students[i] = init_student();
+			int i = 0;
+			while (!students[i].id.empty()) {
+				i++;
 			}
+			students[i] = init_student();
 			break;
 		case 2:
 			search_num = 0;
