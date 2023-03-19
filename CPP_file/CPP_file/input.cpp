@@ -8,6 +8,7 @@ student init_student();
 bool search_student(student tmp1,student tmp2);
 void debug_student(student tmp);
 bool search_dept(dept tmp1, dept tmp2);
+void save_student(student tmp[]);
 int main()
 {
 	ifstream ifs;
@@ -121,6 +122,9 @@ int main()
 				students[search_num].depts[i] = depts[dept_search_num]; // ¼öÁ¤
 			}
 			break;
+		case 6:
+			save_student(students);
+			break;
 		default:
 			break;
 		}
@@ -163,4 +167,26 @@ void debug_student(student tmp)
 {
 	cout << tmp.id << endl;
 	cout << tmp.name << endl;
+}
+void save_student(student tmp[])
+{
+	string filePath = "newstudent.txt";
+	ofstream writefile(filePath.data());
+	if (writefile.is_open()) {
+		int i = 0;
+		while (!tmp[i].id.empty())
+		{
+			writefile << tmp[i].id + '\n';
+			writefile << tmp[i].name + '\n';
+			int j = 0;
+			while (!tmp[i].depts[j].dep_id.empty())
+			{
+				writefile << tmp[i].depts[j].dep_id + '\n';
+				writefile << tmp[i].depts[j].dept_name + '\n';
+				writefile << tmp[i].depts[j].grade + '\n';
+				j++;
+			}
+			i++;
+		}
+	}
 }
