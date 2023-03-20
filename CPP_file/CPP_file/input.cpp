@@ -69,23 +69,28 @@ int main()
 		{
 
 		case 1:
+		{
 			int i = 0;
 			while (!students[i].id.empty()) {
 				i++;
 			}
 			students[i] = init_student();
 			break;
+		}
 		case 2:
+		{
 			search_num = 0;
 			cout << "input search data" << endl;
 			cin >> search.id;
-			while (!search_student(students[search_num],search)) {
+			while (!search_student(students[search_num], search)) {
 				search_num++;
 			}
 			debug_student(students[search_num]);
 			break;
+		}
 		case 3:
-			for(int i=0;!students[i].id.empty();i++)
+		{
+			for (int i = 0; !students[i].id.empty(); i++)
 			{
 				debug_student(students[i]);
 				int j = 0;
@@ -96,7 +101,9 @@ int main()
 				}
 			}
 			break;
+		}
 		case 4:
+		{
 			cout << "choose dept data" << endl;
 			for (int i = 0; !depts[i].dep_id.empty(); i++)
 			{
@@ -104,11 +111,13 @@ int main()
 			}
 			dept_search_num = 0;
 			cin >> dept_search.dep_id;
-			while (!search_dept(depts[dept_search_num],dept_search)) {
+			while (!search_dept(depts[dept_search_num], dept_search)) {
 				dept_search_num++;
 			}
 			break;
+		}
 		case 5:
+		{
 			char tmp;
 			cout << "input this data to founded student?(y,n)" << endl;
 			cin >> tmp;
@@ -122,9 +131,12 @@ int main()
 				students[search_num].depts[i] = depts[dept_search_num]; // ¼öÁ¤
 			}
 			break;
+		}
 		case 6:
+		{
 			save_student(students);
 			break;
+		}
 		default:
 			break;
 		}
@@ -189,4 +201,5 @@ void save_student(student tmp[])
 			i++;
 		}
 	}
+	writefile.close();
 }
