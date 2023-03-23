@@ -153,13 +153,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
         TextOut(hdc, 5, 5, greeting1, _tcslen(greeting1));
 
-        MoveToEx(hdc, 100, 100, NULL);
-        for (int i = 0; i < 100; i++)
-        {
-            LineTo(hdc, i, 100-i);
-        }
-        
-        Rectangle(hdc, 300, 100, 200, 200);
+        MoveToEx(hdc, 100, 100, NULL);//해당 좌표로 이동
+        LineTo(hdc, 50, 200);//이전좌표에서 해당좌표까지 선긋기
+        LineTo(hdc, 400, 400);
+        Rectangle(hdc, 1, 1, 200, 200);
         Ellipse(hdc, 300, 300, 450, 450);
 
         EndPaint(hWnd, &ps);
