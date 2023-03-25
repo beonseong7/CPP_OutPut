@@ -28,3 +28,4 @@
 2023.03.22 다양한 윈도우 그리기 함수(LineTo,Rectangle) 학습  
 2023.03.23 programmers문제 min max 풀이  
 2023.03.24 programmers문제 jadencase 풀이  
+2023.03.25 programmers문제 sum min 풀이  
