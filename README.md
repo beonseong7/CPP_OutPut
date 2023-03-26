@@ -29,4 +29,4 @@
 2023.03.23 programmers문제 min max 풀이  
 2023.03.24 programmers문제 jadencase 풀이  
 2023.03.25 programmers문제 sum min 풀이  
-2023.03.26 programmers문제 right bracket 풀이  
+2023.03.26 programmers문제 right bracket,binary and binary 풀이  
