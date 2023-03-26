@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="jadencase.cpp" />
     <ClCompile Include="min_sum.cpp" />
+    <ClCompile Include="right_bracket.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -21,5 +21,8 @@
     <ClCompile Include="min_sum.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="right_bracket.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
