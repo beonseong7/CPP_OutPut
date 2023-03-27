@@ -127,7 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="arithmetic sequence.cpp" />
     <ClCompile Include="binary_and_binary.cpp" />
+    <ClCompile Include="counting_bit.cpp" />
     <ClCompile Include="right_bracket.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

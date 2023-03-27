@@ -30,3 +30,4 @@
 2023.03.24 programmers문제 jadencase 풀이  
 2023.03.25 programmers문제 sum min 풀이  
 2023.03.26 programmers문제 right bracket,binary and binary 풀이  
+2023.03.27 programmers문제 등차수열 및 '다음 큰 숫자' 풀이  
