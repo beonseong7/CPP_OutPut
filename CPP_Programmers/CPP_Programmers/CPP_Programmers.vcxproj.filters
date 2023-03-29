@@ -27,5 +27,8 @@
     <ClCompile Include="counting_bit.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Pisanoperiod.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
