@@ -30,5 +30,8 @@
     <ClCompile Include="Pisanoperiod.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="remove pairs.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
