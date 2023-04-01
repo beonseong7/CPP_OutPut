@@ -133,6 +133,7 @@
     <ClCompile Include="Pisanoperiod.cpp" />
     <ClCompile Include="remove pairs.cpp" />
     <ClCompile Include="right_bracket.cpp" />
+    <ClCompile Include="word_chain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
