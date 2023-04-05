@@ -42,5 +42,11 @@
     <ClCompile Include="greedy.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="jump and warp.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="tornument.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
