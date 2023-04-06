@@ -131,6 +131,7 @@
     <ClCompile Include="binary_and_binary.cpp" />
     <ClCompile Include="capet.cpp" />
     <ClCompile Include="counting_bit.cpp" />
+    <ClCompile Include="gcd.cpp" />
     <ClCompile Include="greedy.cpp" />
     <ClCompile Include="jump and warp.cpp" />
     <ClCompile Include="Pisanoperiod.cpp" />
