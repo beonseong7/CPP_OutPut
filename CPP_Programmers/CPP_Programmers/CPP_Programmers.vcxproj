@@ -134,6 +134,7 @@
     <ClCompile Include="dp.cpp" />
     <ClCompile Include="gcd.cpp" />
     <ClCompile Include="greedy.cpp" />
+    <ClCompile Include="h_index.cpp" />
     <ClCompile Include="jump and warp.cpp" />
     <ClCompile Include="Pisanoperiod.cpp" />
     <ClCompile Include="remove pairs.cpp" />
