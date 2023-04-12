@@ -139,6 +139,7 @@
     <ClCompile Include="Pisanoperiod.cpp" />
     <ClCompile Include="remove pairs.cpp" />
     <ClCompile Include="right_bracket.cpp" />
+    <ClCompile Include="rotate.cpp" />
     <ClCompile Include="tornument.cpp" />
     <ClCompile Include="word_chain.cpp" />
   </ItemGroup>
