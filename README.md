@@ -46,4 +46,5 @@
 2023.04.09 programmers문제 '멀리뛰기' 풀이  
 2023.04.10 programmers문제 'H-index' 풀이  
 2023.04.11 programmers문제 '괄호 회전하기' 풀이중  
-2023.04.11 programmers문제 '괄호 회전하기' 풀이  
+2023.04.12 programmers문제 '괄호 회전하기' 풀이  
+2023.04.13 programmers문제 '1차 캐시' 풀이중  
