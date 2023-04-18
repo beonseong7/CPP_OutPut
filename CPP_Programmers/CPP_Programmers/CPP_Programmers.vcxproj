@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="arithmetic sequence.cpp" />
     <ClCompile Include="binary_and_binary.cpp" />
+    <ClCompile Include="cache_LRU.cpp" />
     <ClCompile Include="capet.cpp" />
     <ClCompile Include="counting_bit.cpp" />
     <ClCompile Include="dp.cpp" />
