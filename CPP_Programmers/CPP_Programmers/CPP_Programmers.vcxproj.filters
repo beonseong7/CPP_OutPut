@@ -63,5 +63,8 @@
     <ClCompile Include="cache_LRU.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="matrix.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

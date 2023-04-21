@@ -137,6 +137,7 @@
     <ClCompile Include="greedy.cpp" />
     <ClCompile Include="h_index.cpp" />
     <ClCompile Include="jump and warp.cpp" />
+    <ClCompile Include="matrix.cpp" />
     <ClCompile Include="Pisanoperiod.cpp" />
     <ClCompile Include="remove pairs.cpp" />
     <ClCompile Include="right_bracket.cpp" />
