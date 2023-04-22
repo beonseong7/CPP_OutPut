@@ -56,3 +56,4 @@
 2023.04.19 programmers문제 '행렬의 곱셈' 풀이중  
 2023.04.20 programmers문제 '행렬의 곱' 풀이중  
 2023.04.21 programmers문제 '행렬의 곱' 풀이  
+2023.04.22 programmers문제 'n^2 배열 자르기' 풀이중  
