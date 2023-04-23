@@ -132,6 +132,7 @@
     <ClCompile Include="cache_LRU.cpp" />
     <ClCompile Include="capet.cpp" />
     <ClCompile Include="counting_bit.cpp" />
+    <ClCompile Include="cut_n^2array.cpp" />
     <ClCompile Include="dp.cpp" />
     <ClCompile Include="gcd.cpp" />
     <ClCompile Include="greedy.cpp" />
