@@ -134,6 +134,7 @@
     <ClCompile Include="counting_bit.cpp" />
     <ClCompile Include="cut_n^2array.cpp" />
     <ClCompile Include="dp.cpp" />
+    <ClCompile Include="function_develop.cpp" />
     <ClCompile Include="gcd.cpp" />
     <ClCompile Include="greedy.cpp" />
     <ClCompile Include="hash_clothes.cpp" />
