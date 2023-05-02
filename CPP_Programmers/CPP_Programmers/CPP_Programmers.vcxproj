@@ -142,6 +142,7 @@
     <ClCompile Include="jump and warp.cpp" />
     <ClCompile Include="matrix.cpp" />
     <ClCompile Include="Pisanoperiod.cpp" />
+    <ClCompile Include="process.cpp" />
     <ClCompile Include="remove pairs.cpp" />
     <ClCompile Include="right_bracket.cpp" />
     <ClCompile Include="rotate.cpp" />

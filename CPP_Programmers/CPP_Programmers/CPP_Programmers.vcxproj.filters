@@ -78,5 +78,8 @@
     <ClCompile Include="function_develop.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="process.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
