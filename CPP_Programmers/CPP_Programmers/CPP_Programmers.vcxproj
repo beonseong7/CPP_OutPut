@@ -133,6 +133,7 @@
     <ClCompile Include="capet.cpp" />
     <ClCompile Include="counting_bit.cpp" />
     <ClCompile Include="cut_n^2array.cpp" />
+    <ClCompile Include="dfs.cpp" />
     <ClCompile Include="dp.cpp" />
     <ClCompile Include="function_develop.cpp" />
     <ClCompile Include="gcd.cpp" />
