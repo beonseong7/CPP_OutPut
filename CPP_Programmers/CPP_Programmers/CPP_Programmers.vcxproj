@@ -148,6 +148,7 @@
     <ClCompile Include="right_bracket.cpp" />
     <ClCompile Include="rotate.cpp" />
     <ClCompile Include="sale_event.cpp" />
+    <ClCompile Include="stamina.cpp" />
     <ClCompile Include="tornument.cpp" />
     <ClCompile Include="tuple.cpp" />
     <ClCompile Include="word_chain.cpp" />
