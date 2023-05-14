@@ -78,4 +78,4 @@
 2023.05.11 programmers문제 '피로도' 풀이중     
 2023.05.12 programmers문제 '피로도' 풀이     
 2023.05.13 programmers문제 '전화번호 넘버' 풀이중     
-2023.05.14 programmers문제 '전화번호 넘버' 풀이     
+2023.05.14 programmers문제 '전화번호 넘버' 풀이중     
