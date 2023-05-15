@@ -142,6 +142,7 @@
     <ClCompile Include="h_index.cpp" />
     <ClCompile Include="jump and warp.cpp" />
     <ClCompile Include="matrix.cpp" />
+    <ClCompile Include="phone_number_list.cpp" />
     <ClCompile Include="Pisanoperiod.cpp" />
     <ClCompile Include="process.cpp" />
     <ClCompile Include="remove pairs.cpp" />
