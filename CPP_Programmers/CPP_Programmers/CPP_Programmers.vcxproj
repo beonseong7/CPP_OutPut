@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="2022 kakao sosu.cpp" />
     <ClCompile Include="arithmetic sequence.cpp" />
     <ClCompile Include="binary_and_binary.cpp" />
     <ClCompile Include="cache_LRU.cpp" />
