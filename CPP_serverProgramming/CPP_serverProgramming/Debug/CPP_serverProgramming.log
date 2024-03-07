@@ -1,0 +1,2 @@
+﻿  socket.cpp
+D:\bsroom\CPPpoject\CPP_OutPut\CPP_serverProgramming\CPP_serverProgramming\socket.cpp(1,10): fatal error C1083: 미리 컴파일된 헤더 파일을 열 수 없습니다. 'Debug\CPP_serverProgramming.pch': No such file or directory
